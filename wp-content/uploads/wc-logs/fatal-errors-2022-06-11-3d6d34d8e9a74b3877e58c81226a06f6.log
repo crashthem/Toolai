@@ -1,0 +1,93 @@
+2022-06-11T10:11:07+00:00 CRITICAL Uncaught Error: Call to a member function get_regular_price() on null in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php:189
+Stack trace:
+#0 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(772): require()
+#1 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(716): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\projects\toolai\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\page-templates\flexible-sections.php(24): get_template_part('template-parts/...', 'hero-slider')
+#4 C:\xampp\htdocs\projects\toolai\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\projects\toolai\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\projects\toolai\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php on line 189
+
+2022-06-11T10:25:12+00:00 CRITICAL Uncaught Error: Call to a member function get_regular_price() on null in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php:190
+Stack trace:
+#0 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(772): require()
+#1 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(716): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\projects\toolai\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\page-templates\flexible-sections.php(24): get_template_part('template-parts/...', 'hero-slider')
+#4 C:\xampp\htdocs\projects\toolai\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\projects\toolai\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\projects\toolai\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php on line 190
+
+2022-06-11T10:47:07+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_get_products(), 0 passed in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php on line 23 and exactly 1 expected in C:\xampp\htdocs\projects\toolai\wp-content\plugins\woocommerce\includes\wc-product-functions.php:31
+Stack trace:
+#0 C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php(23): wc_get_products()
+#1 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(772): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(716): load_template('C:\\xampp\\htdocs...', false, Array)
+#3 C:\xampp\htdocs\projects\toolai\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#4 C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\page-templates\flexible-sections.php(24): get_template_part('template-parts/...', 'hero-slider')
+#5 C:\xampp\htdocs\projects\toolai\wp-includes\template-lo in C:\xampp\htdocs\projects\toolai\wp-content\plugins\woocommerce\includes\wc-product-functions.php on line 31
+
+2022-06-11T10:52:53+00:00 CRITICAL Uncaught Error: Call to a member function get_regular_price() on null in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php:187
+Stack trace:
+#0 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(772): require()
+#1 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(716): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\projects\toolai\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\page-templates\flexible-sections.php(24): get_template_part('template-parts/...', 'hero-slider')
+#4 C:\xampp\htdocs\projects\toolai\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\projects\toolai\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\projects\toolai\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php on line 187
+
+2022-06-11T10:55:23+00:00 CRITICAL Uncaught Error: Call to a member function get_name() on null in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php:187
+Stack trace:
+#0 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(772): require()
+#1 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(716): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\projects\toolai\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\page-templates\flexible-sections.php(24): get_template_part('template-parts/...', 'hero-slider')
+#4 C:\xampp\htdocs\projects\toolai\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\projects\toolai\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\projects\toolai\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php on line 187
+
+2022-06-11T10:58:22+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on null in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php:167
+Stack trace:
+#0 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(772): require()
+#1 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(716): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\projects\toolai\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\page-templates\flexible-sections.php(24): get_template_part('template-parts/...', 'hero-slider')
+#4 C:\xampp\htdocs\projects\toolai\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\projects\toolai\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\projects\toolai\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php on line 167
+
+2022-06-11T10:59:19+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on null in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php:167
+Stack trace:
+#0 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(772): require()
+#1 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(716): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\projects\toolai\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\page-templates\flexible-sections.php(24): get_template_part('template-parts/...', 'hero-slider')
+#4 C:\xampp\htdocs\projects\toolai\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\projects\toolai\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\projects\toolai\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php on line 167
+
+2022-06-11T10:59:37+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on null in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php:167
+Stack trace:
+#0 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(772): require()
+#1 C:\xampp\htdocs\projects\toolai\wp-includes\template.php(716): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\projects\toolai\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\page-templates\flexible-sections.php(24): get_template_part('template-parts/...', 'hero-slider')
+#4 C:\xampp\htdocs\projects\toolai\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\projects\toolai\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\projects\toolai\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\template-parts\sections\section-hero-slider.php on line 167
+

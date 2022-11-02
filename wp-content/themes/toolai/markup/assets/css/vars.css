@@ -1,0 +1,20 @@
+:root {
+    --main: #FDD4D7;
+    --main-80: rgba(253, 212, 215, 0.8);
+    --main-50: rgba(253, 212, 215, 0.5);
+    --grey: #EEEEEE;
+    --black: #000;
+    --black-50: rgba(0,0,0,0.5);
+    --black-30: rgba(0,0,0,0.3);
+    --white: #fff;
+    --white-70: rgba(255, 255, 255, 0.7);
+    --red: #CD0000;
+    --transition-speed: 0.4s;
+    --ff-title: 'Bodoni', serif;
+    --ff-text: 'Avenir', sans-serif;
+    --radius: 10px;
+    --radius-sm: 8px;
+    --radius-lg: 25px;
+    /* --container-width: min(1610px, calc(100% - 40px)); */
+    --container-width: min(1270px, calc(100% - 40px));
+}

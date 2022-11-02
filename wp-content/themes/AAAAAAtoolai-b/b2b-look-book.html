@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toolai</title>
+    <!-- <link rel="stylesheet" href="./tinyslider/tiny-slider.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="body-mask"></div>
+    <div class="modals">
+        <div class="modal auth-modal" data-name="auth">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Authorization</h4>
+                    <button class="modal-close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="auth-form">
+                        <input type="email" placeholder="email" required>
+                        <input type="password" placeholder="password" required>
+                        <button type="submit">Sign in</button>
+                        <button type="button" class="modal-close" data-toggle="modal" data-modal="register">
+                            Don't have an account?
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal auth-modal" data-name="register">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Registration</h4>
+                    <button class="modal-close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="auth-form">
+                        <input type="email" placeholder="email" required>
+                        <input type="password" placeholder="password" required>
+                        <input type="password" placeholder="confirm the password" required>
+                        <button type="submit">Sign in</button>
+                        <button type="button" class="modal-close" data-toggle="modal" data-modal="auth">
+                            Already have an account
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal search-modal" data-name="search">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form class="search-form">
+                        <input type="text" placeholder="search for" required>
+                        <button class="search-button">search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal cart-modal" data-name="cart">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Shopping cart</h4>
+                    <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-list">
+                        <div class="cart__item">
+                            <div class="item__col">
+                                <img src="./images/look/img1.jpg" class="item__thumb" alt="">
+                                <span class="item__name">some item</span>
+                            </div>
+                            <div class="item__col">
+                                <span class="item__color">red</span>
+                                <span class="item__size"> S </span>
+                                <span class="item__price">500$</span>
+                            </div>
+                        </div>
+                        <div class="cart__item">
+                            <div class="item__col">
+                                <img src="./images/look/img1.jpg" class="item__thumb" alt="">
+                                <span class="item__name">some item</span>
+                            </div>
+                            <div class="item__col">
+                                <span class="item__color">red</span>
+                                <span class="item__size"> S </span>
+                                <span class="item__price">500$</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <strong class="cart-total">500$</strong>
+                </div>
+            </div>
+        </div>
+        <div class="modal wishlist-modal" data-name="wishlist">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Wishlist</h4>
+                    <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-list">
+                        <div class="cart__item">
+                            <div class="item__col">
+                                <img src="./images/look/img1.jpg" class="item__thumb" alt="">
+                                <span class="item__name">some item</span>
+                            </div>
+                            <div class="item__col">
+                                <span class="item__color">red</span>
+                                <span class="item__size"> S </span>
+                                <span class="item__price">500$</span>
+                            </div>
+                        </div>
+                        <div class="cart__item">
+                            <div class="item__col">
+                                <img src="./images/look/img1.jpg" class="item__thumb" alt="">
+                                <span class="item__name">some item</span>
+                            </div>
+                            <div class="item__col">
+                                <span class="item__color">red</span>
+                                <span class="item__size"> S </span>
+                                <span class="item__price">500$</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <strong class="cart-total">2 items in wishlist</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="container">
+            <div class="tools desctop">
+                <div class="loc-lang">
+                    <div class="my-select country-switcher" data-value="null">
+                        <div class="placeholder">
+                            <span class="placeholder-text">
+                                <img src="./icons/flags/eng.png" alt="">
+                            </span>
+                            <span class="placeholder-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="options">
+                            <div class="option" data-value="ru"><img src="./icons/flags/rf.jpg" alt=""></div>
+                            <div class="option" data-value="kg"><img src="./icons/flags/kg.png" alt=""></div>
+                            <div class="option" data-value="en"><img src="./icons/flags/eng.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="my-select lang-switcher" data-value="null">
+                        <div class="placeholder">
+                            <span class="placeholder-text">English</span>
+                            <span class="placeholder-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="options">
+                            <div class="option" data-value="ru">Русский</div>
+                            <div class="option" data-value="kg">Кыргызча</div>
+                            <div class="option" data-value="en">English</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-panel desctop">
+                    <div class="user-panel__item search-button" data-toggle="modal" data-modal="search">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="user-panel__item favorite" data-toggle="modal" data-modal="wishlist">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="user-panel__item bag" data-toggle="modal" data-modal="cart">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <a class="user-panel__item profile" data-toggle="modal" data-modal="auth">
+                        <i class="far fa-user"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="logo desctop">
+                <img src="./icons/logo.png" alt="">
+            </div>
+            <nav class="main-nav desctop">
+                <div class="nav-menu">
+                    <a href="index.html" class="title">
+                        home
+                    </a>
+                </div>
+                <div class="nav-menu" data-toggle="drop-menu">
+                    <a href="./store.html" class="title">
+                        store
+                    </a>
+                    <div class="drop-menu">
+                        <div class="list">
+                            <div class="col">
+                                <a href="#" class="nav-link">All clothing</a>
+                                <a href="#" class="nav-link">Dresses </a>
+                                <a href="#" class="nav-link">Tops</a>
+                                <a href="#" class="nav-link">Jackets</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Knitwear</a>
+                                <a href="#" class="nav-link">Sport</a>
+                                <a href="#" class="nav-link">Jumpsuits</a>
+                                <a href="#" class="nav-link">Skirts</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Jeans</a>
+                                <a href="#" class="nav-link">Trousers</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/nav/img1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-menu" data-toggle="drop-menu">
+                    <a href="#" class="title">
+                        trends
+                    </a>
+                    <div class="drop-menu">
+                        <div class="list">
+                            <div class="col">
+                                <a href="#" class="nav-link">All clothing</a>
+                                <a href="#" class="nav-link">Dresses </a>
+                                <a href="#" class="nav-link">Tops</a>
+                                <a href="#" class="nav-link">Jackets</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Knitwear</a>
+                                <a href="#" class="nav-link">Sport</a>
+                                <a href="#" class="nav-link">Jumpsuits</a>
+                                <a href="#" class="nav-link">Skirts</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Jeans</a>
+                                <a href="#" class="nav-link">Trousers</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/nav/img2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-menu" data-toggle="drop-menu">
+                    <a href="./partners.html" class="title">
+                        partners
+                    </a>
+                    <div class="drop-menu">
+                        <div class="list">
+                            <div class="col">
+                                <a href="#" class="nav-link">All clothing</a>
+                                <a href="#" class="nav-link">Dresses </a>
+                                <a href="#" class="nav-link">Tops</a>
+                                <a href="#" class="nav-link">Jackets</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Knitwear</a>
+                                <a href="#" class="nav-link">Sport</a>
+                                <a href="#" class="nav-link">Jumpsuits</a>
+                                <a href="#" class="nav-link">Skirts</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Jeans</a>
+                                <a href="#" class="nav-link">Trousers</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/nav/img3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-menu" data-toggle="drop-menu">
+                    <a href="./philosophy.html" class="title">
+                        philosophy
+                    </a>
+                    <div class="drop-menu">
+                        <div class="list">
+                            <div class="col">
+                                <a href="#" class="nav-link">All clothing</a>
+                                <a href="#" class="nav-link">Dresses </a>
+                                <a href="#" class="nav-link">Tops</a>
+                                <a href="#" class="nav-link">Jackets</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Knitwear</a>
+                                <a href="#" class="nav-link">Sport</a>
+                                <a href="#" class="nav-link">Jumpsuits</a>
+                                <a href="#" class="nav-link">Skirts</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Jeans</a>
+                                <a href="#" class="nav-link">Trousers</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/nav/img4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-menu" data-toggle="drop-menu">
+                    <a href="./special-offer.html" class="title">
+                        special offer
+                    </a>
+                    <div class="drop-menu">
+                        <div class="list">
+                            <div class="col">
+                                <a href="#" class="nav-link">All clothing</a>
+                                <a href="#" class="nav-link">Dresses </a>
+                                <a href="#" class="nav-link">Tops</a>
+                                <a href="#" class="nav-link">Jackets</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Knitwear</a>
+                                <a href="#" class="nav-link">Sport</a>
+                                <a href="#" class="nav-link">Jumpsuits</a>
+                                <a href="#" class="nav-link">Skirts</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Jeans</a>
+                                <a href="#" class="nav-link">Trousers</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/nav/img5.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <nav class="mobile-nav">
+            <!-- Mobile Nav -->
+            <div class="mobile-nav-header">
+                <button class="mobile-nav-button">
+                    <span class="top"></span>
+                    <span class="mid"></span>
+                    <span class="sub"></span>
+                </button>
+                <div class="logo">
+                    <img src="./icons/logo.png" alt="">
+                </div>
+                <div class="user-panel">
+                    <div class="user-panel__item --white search-button" data-toggle="modal" data-modal="search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </div>
+                    <div class="user-panel__item --white bag" data-toggle="modal" data-modal="cart">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-header">
+                    <div class="loc-lang">
+                        <div class="my-select country-switcher" data-value="null">
+                            <div class="placeholder">
+                                <span class="placeholder-text">
+                                    <img src="./icons/flags/eng.png" alt="">
+                                </span>
+                                <span class="placeholder-arrow">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </div>
+                            <div class="options">
+                                <div class="option" data-value="ru"><img src="./icons/flags/rf.jpg" alt=""></div>
+                                <div class="option" data-value="kg"><img src="./icons/flags/kg.png" alt=""></div>
+                                <div class="option" data-value="en"><img src="./icons/flags/eng.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="my-select lang-switcher" data-value="null">
+                            <div class="placeholder"><span class="placeholder-text">English</span><span
+                                    class="placeholder-arrow"><i class="fas fa-chevron-down"></i></span></div>
+                            <div class="options">
+                                <div class="option" data-value="ru">Русский</div>
+                                <div class="option" data-value="kg">Кыргызча</div>
+                                <div class="option" data-value="en">English</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-panel">
+                        <div class="user-panel__item favorite" data-toggle="modal" data-modal="wishlist">
+                            <i class="far fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <a class="user-panel__item profile" data-toggle="modal" data-modal="auth">
+                            <i class="far fa-user" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="./index.html" class="title"> home </a>
+                </div>
+                <div class="nav-item" data-toggle="sub-menu">
+                    <a href="./store.html" class="title"> store </a>
+                    <div class="sub-menu">
+                        <div class="sub-menu-header">
+                            <div class="sub-menu-close">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <a href="./store.html" class="nav-link">All clothing</a>
+                            <a href="./store.html" class="nav-link">Dresses </a>
+                            <a href="./store.html" class="nav-link">Tops</a>
+                            <a href="./store.html" class="nav-link">Jackets</a>
+                            <a href="./store.html" class="nav-link">Knitwear</a>
+                            <a href="./store.html" class="nav-link">Sport</a>
+                            <a href="./store.html" class="nav-link">Jumpsuits</a>
+                            <a href="./store.html" class="nav-link">Skirts</a>
+                            <a href="./store.html" class="nav-link">Jeans</a>
+                            <a href="./store.html" class="nav-link">Trousers</a>
+                            <a href="./store.html" class="nav-link">Blouses</a>
+                            <a href="./store.html" class="nav-link">Blouses</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item" data-toggle="sub-menu">
+                    <a href="#" class="title"> trends </a>
+                    <div class="sub-menu">
+                        <div class="sub-menu-header">
+                            <div class="sub-menu-close">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends </a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item" data-toggle="sub-menu">
+                    <a href="#" class="title"> partners </a>
+                    <div class="sub-menu">
+                        <div class="sub-menu-header">
+                            <div class="sub-menu-close">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <a href="#" class="nav-link">partners</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item" data-toggle="sub-menu">
+                    <a href="#" class="title"> philosophy </a>
+                    <div class="sub-menu">
+                        <div class="sub-menu-header">
+                            <div class="sub-menu-close">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy </a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item" data-toggle="sub-menu">
+                    <a href="#" class="title"> special offer </a>
+                    <div class="sub-menu">
+                        <div class="sub-menu-header">
+                            <div class="sub-menu-close">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <a href="#" class="nav-link">All offers</a>
+                            <a href="#" class="nav-link">offer </a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav> <!-- Mobile Nav End -->
+    </header>
+    <main>
+        <section class="b2b look-book">
+            <div class="container">
+                <h2 class="section-title">
+                    Look book
+                </h2>
+                <div class="info-list">
+                    <a href="./contact.html" class="info-list__link active">SEASONS</a>
+                    <a href="./payment.html" class="info-list__link">MIDSEASONS</a>
+                    <a href="./delivery.html" class="info-list__link">PRONTO</a>
+                    <a href="./returns.html" class="info-list__link">RESORT</a>
+                    <a href="faq.html" class="info-list__link">ACCESSORIES</a>
+                    <a href="./privacy.html" class="info-list__link">EVENING</a>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./images/look-book/img1.jpg" alt="">
+                            <div class="card-content">
+                                <h4 class="card-title">Toolai</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./images/look-book/img2.jpg" alt="">
+                            <div class="card-content">
+                                <h4 class="card-title">Toolai</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./images/look-book/img3.jpg" alt="">
+                            <div class="card-content">
+                                <h4 class="card-title">Toolai</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./images/look-book/img4.jpg" alt="">
+                            <div class="card-content">
+                                <h4 class="card-title">Toolai</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./images/look-book/img5.jpg" alt="">
+                            <div class="card-content">
+                                <h4 class="card-title">Toolai</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./images/look-book/img6.jpg" alt="">
+                            <div class="card-content">
+                                <h4 class="card-title">Toolai</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./images/look-book/img7.jpg" alt="">
+                            <div class="card-content">
+                                <h4 class="card-title">Toolai</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./images/look-book/img8.jpg" alt="">
+                            <div class="card-content">
+                                <h4 class="card-title">Toolai</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./images/look-book/img9.jpg" alt="">
+                            <div class="card-content">
+                                <h4 class="card-title">Toolai</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./images/look-book/img10.jpg" alt="">
+                            <div class="card-content">
+                                <h4 class="card-title">Toolai</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./images/look-book/img11.jpg" alt="">
+                            <div class="card-content">
+                                <h4 class="card-title">Toolai</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./images/look-book/img12.jpg" alt="">
+                            <div class="card-content">
+                                <h4 class="card-title">Toolai</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="./images/look-book/img13.jpg" alt="">
+                            <div class="card-content">
+                                <h4 class="card-title">Toolai</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products-pagination">
+                <div class="container">
+                    <button class="prev"><i class="fas fa-angle-double-left"></i></button>
+                    <span>Page 1 of 26</span>
+                    <button class="next"><i class="fas fa-angle-double-right"></i></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container links">
+            <nav class="footer-nav desctop">
+                <div class="col">
+                    <div class="title">TOOLAI</div>
+                    <a href="#">About us</a>
+                    <a href="#">Partnership</a>
+                    <a href="#">Affiliates</a>
+                    <a href="#">Size guide</a>
+                    <a href="#">Stories</a>
+                </div>
+                <div class="col">
+                    <div class="title">Services</div>
+                    <a href="./delivery.html">Delivery</a>
+                    <a href="./advertising.html">Advertising</a>
+                    <a href="./returns.html">Exchange, Return <br> & Refund</a>
+                    <a href="./payment.html">Payment</a>
+                </div>
+                <div class="col">
+                    <div class="title">Legal</div>
+                    <a href="./terms-and-conditions.html">Terms & Conditions</a>
+                    <a href="./privacy.html">Privacy policy</a>
+                    <a href="./cookie.html">Cookie policy</a>
+                    <a href="./contact.html">Contuct us</a>
+                    <a href="./faq.html">FAQ</a>
+                </div>
+            </nav>
+            <nav class="footer-nav mobile">
+                <div class="loc-lang">
+                    <div class="my-select country-switcher" data-value="null">
+                        <div class="placeholder">
+                            <span class="placeholder-text">
+                                <img src="./icons/flags/eng.png" alt="">
+                            </span>
+                            <span class="placeholder-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="options">
+                            <div class="option" data-value="ru"><img src="./icons/flags/rf.jpg" alt=""></div>
+                            <div class="option" data-value="kg"><img src="./icons/flags/kg.png" alt=""></div>
+                            <div class="option" data-value="en"><img src="./icons/flags/eng.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="my-select lang-switcher" data-value="null">
+                        <div class="placeholder">
+                            <span class="placeholder-text">English</span>
+                            <span class="placeholder-arrow">
+                                <i class="fas fa-chev

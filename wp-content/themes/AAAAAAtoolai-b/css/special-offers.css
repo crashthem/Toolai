@@ -1,0 +1,111 @@
+.offers-promo .section-title {
+    padding-bottom: 30px;
+}
+.products-tools h5 {
+    font-size: 16px;
+}
+.offers-filter {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    column-gap: 30px;
+    padding: 20px 0;
+    max-width: 100%;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+}
+.offers-filter::-webkit-scrollbar {
+    height: 3px;
+    background: var(--black-30);
+}
+.offers-filter::-webkit-scrollbar-thumb {
+    background: var(--black);
+    border-radius: 2.5px;
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+}
+.offers-filter__link {
+    white-space: nowrap;
+}
+.offers-filter__link:hover {
+    color: var(--main);
+    text-transform: uppercase;
+}
+.offers-filter__link.active {
+    color: var(--main);
+}
+.offers-baner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    column-gap: 30px;
+}
+.offers-baner__title {
+    position: absolute;
+    font-weight: normal;
+    font-size: 40px;
+    width: min(500px, 100%);
+    text-align: center;
+    background: var(--main-50);
+}
+.offers-list .card-body {
+    display: flex;
+    justify-content: center;
+}
+.card-sizes {
+    position: absolute;
+    bottom: 20px;
+    text-transform: uppercase;
+    background: var(--white-70);
+    padding: 15px;
+    opacity: 0;
+    transition: all var(--transition-speed) ease;
+    -webkit-transition: all var(--transition-speed) ease;
+    -moz-transition: all var(--transition-speed) ease;
+    -ms-transition: all var(--transition-speed) ease;
+    -o-transition: all var(--transition-speed) ease;
+}
+.offers-list .card-body:hover .card-sizes {
+    opacity: 1;
+}
+.card-sizes__title {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+.card-sizes__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.card-sizes [type=checkbox] {
+    width: 0;
+    height: 0;
+}
+.card-sizes__item {
+    cursor: pointer;
+}
+.card-sizes__item:hover {
+    color: var(--red);
+}
+.card-sizes__item.active {
+    color: var(--red);
+}
+.card-sizes :checked + label {
+    color: var(--red);
+}
+.card-prices {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+.card__common-price {
+    text-decoration: line-through;
+}
+.card__discount-price {
+    color: var(--red);
+}

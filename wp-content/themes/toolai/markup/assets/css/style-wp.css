@@ -1,0 +1,33 @@
+@media (max-width: 1000px) {
+    #wpadminbar {
+        display: none;
+    }
+}
+
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+    color: unset;
+    font-size: unset;
+}
+
+.archive .button.add_to_cart_button,
+.page-numbers {
+    display: none;
+}
+
+.prev.page-numbers,
+.next.page-numbers,
+.page-numbers.current {
+    display: block;
+}
+
+.ptocheckout {
+    width: auto;
+    color: #fff;
+    height: 40px;
+    padding: 8px 20px;
+    background: var(--black);
+    border: none;
+    -webkit-border-radius: var(--radius-sm);
+    margin-left: 132px;
+}

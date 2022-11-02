@@ -1,0 +1,18 @@
+2022-06-09T05:11:58+00:00 CRITICAL Uncaught Error: Object of class WP_Error could not be converted to string in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\woocommerce\archive-product.php:61
+Stack trace:
+#0 C:\xampp\htdocs\projects\toolai\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\projects\toolai\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\projects\toolai\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\woocommerce\archive-product.php on line 61
+
+2022-06-09T05:12:52+00:00 CRITICAL Uncaught Error: Object of class WP_Error could not be converted to string in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\woocommerce\archive-product.php:61
+Stack trace:
+#0 C:\xampp\htdocs\projects\toolai\wp-content\plugins\woocommerce\includes\wc-core-functions.php(345): include()
+#1 C:\xampp\htdocs\projects\toolai\wp-content\plugins\woocommerce\templates\taxonomy-product-cat.php(22): wc_get_template('archive-product...')
+#2 C:\xampp\htdocs\projects\toolai\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\projects\toolai\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\projects\toolai\index.php(17): require('C:\\xampp\\htdocs...')
+#5 {main}
+  thrown in C:\xampp\htdocs\projects\toolai\wp-content\themes\toolai\woocommerce\archive-product.php on line 61
+

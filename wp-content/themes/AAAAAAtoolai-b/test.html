@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .container {
+            width: min(1200px, 100vh - 50px);
+            margin: 0 auto;
+        }
+        .my-select {
+            --padding: 5px 10px;
+            --border-width: 2px;
+            --transition-speed: 0.9s;
+            --transition: all var(--transition-speed) ease;
+            width: 100%;
+            border: 2px solid black;
+            border-radius: 4px;
+            position: relative;
+            padding: var(--padding);
+        }
+        .my-select .placeholder {
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        .my-select .options {
+            position: absolute;
+            top: 100%;
+            left: -2px;
+            width: 100%;
+            border: var(--border-width) solid black;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        .my-select.active .options {
+            visibility: visible;
+        }
+        .my-select .placeholder-arrow {
+            transform-origin: center;
+            transition: var(--transition);
+        }
+        .my-select.active .placeholder-arrow {
+            transform: rotateX(180deg);
+        }
+        .my-select .option {
+            padding: var(--padding);
+            cursor: pointer;
+        }
+        .my-select .option:hover {
+            background: teal;
+        }
+        [data-href] {
+            cursor: pointer;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+
+    <div class="container">
+        <div class="my-select" data-value="null">
+            <div class="placeholder">
+                <span class="placeholder-text">Выберите вариант</span>
+                <span class="placeholder-arrow"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="options">
+                <div class="option" data-value="red">красный</div>
+                <div class="option" data-value="blue">синий</div>
+                <div class="option" data-value="teal">зеленый</div>
+                <div class="option" data-value="yellow">желтый</div>
+                <div class="option" data-value="orange">оранжевый</div>
+            </div>
+        </div>
+
+        <div class="link" data-href="https://www.youtube.com/watch?v=tqbopAQ1yCo" style="padding-top: 40px;">Ссылка >></div>
+        <div class="test" v-if="test-attr-vif">test</div>
+        <div class="test" :if="test-attr-vif">test</div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/fe05d3666d.js" crossorigin="anonymous"></script>
+    <script>
+        const select = document.querySelector('.my-select')
+        const placeholder = select.querySelector('.my-select .placeholder-text')
+        const options = select.querySelector('.options')
+        const optionsList = select.querySelectorAll('.option')
+        select.addEventListener('click', () => select.classList.toggle('active'))
+        optionsList.forEach(option => {
+            option.addEventListener('click', () => {
+                select.dataset.value = option.dataset.value
+                document.body.style.background = select.dataset.value
+                placeholder.innerText = option.innerText
+            })
+        })
+
+        const links = document.querySelectorAll('[data-href]')
+        links.forEach( link => {
+            link.addEventListener('click', () => window.location.href = link.dataset.href)
+        })
+        const vif = document.querySelectorAll('.test')
+        vif.forEach(v => console.log(v.getAttribute(':if')))
+        /* console.log(vif.getAttribute('v-if')) */
+    </script>
+</body>
+</html>

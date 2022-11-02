@@ -1,0 +1,77 @@
+.b2b .section-title {
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--black);
+    margin-bottom: 30px;
+}
+.b2b .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+}
+.look-book .cards {
+    padding-bottom: 20px;
+}
+.b2b .card-body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+.b2b .card-content {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    background: var(--main-80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+    transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transition: all var(--transition-speed) ease;
+    -webkit-transition: all var(--transition-speed) ease;
+    -moz-transition: all var(--transition-speed) ease;
+    -ms-transition: all var(--transition-speed) ease;
+    -o-transition: all var(--transition-speed) ease;
+}
+.b2b .card:hover .card-content {
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+}
+.b2b .card-title {
+    font-size: 20px;
+}
+
+.full-cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.full-cards .card-content {
+    transform: unset;
+    -webkit-transform: unset;
+    -moz-transform: unset;
+    -ms-transform: unset;
+    -o-transform: unset;
+    width: unset;
+    height: unset;
+    padding: 30px 80px;
+    left: 60px;
+    bottom: 60px;
+}
+
+.look-book .section-title {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+}
+.look-book .info-list {
+    margin-bottom: 30px;
+}

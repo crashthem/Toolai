@@ -1,0 +1,68 @@
+
+.tab-item {
+    display: none;
+}
+.tab-item.active {
+    display: block;
+}
+.tab-title {
+    cursor: pointer;
+    color: var(--black);
+}
+.tab-title.active {
+    color: var(--main);
+}
+.tab-panel {
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+
+.philosophy .tab-panel {
+    padding: 20px 0;
+    column-gap: 60px;
+}
+.philosophy .tab-item.active {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.philosophy-card {
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+}
+.philosophy-card:nth-child(2n) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+.philosophy-card .card-image {
+    width: 60%;
+    flex-shrink: 0;
+}
+.philosophy-card .card-image img {
+    width: 100%;
+}
+.philosophy-card .card-title {
+    font-size: 20px;
+}
+.philosophy-card .card-content {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding: 50px;
+    line-height: 150%;
+}
+.philosophy-card .card-link {
+    font-size: 16px;
+}
+
+.explore .container, .nomad .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+}

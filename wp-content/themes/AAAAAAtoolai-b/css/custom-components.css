@@ -1,0 +1,58 @@
+.my-select {
+    --padding: 5px 10px;
+    --border-width: 2px;
+    --transition-speed: 0.3s;
+    --transition: all var(--transition-speed) ease;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 4px;
+    position: relative;
+    padding: var(--padding);
+    text-transform: uppercase;
+    z-index: 1;
+    font-size: 16px;
+}
+.my-select .placeholder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    column-gap: 5px;
+}
+.my-select .options {
+    position: absolute;
+    top: 100%;
+    left: -2px;
+    width: calc(100% + var(--border-width)*2);
+    border: var(--border-width) solid black;
+    visibility: hidden;
+    background: var(--white);
+}
+.my-select.active .options {
+    visibility: visible;
+}
+.my-select .placeholder-arrow {
+    transform-origin: center;
+    transition: transform var(--transition-speed) ease;
+    -webkit-transition: transform var(--transition-speed) ease;
+    -moz-transition: transform var(--transition-speed) ease;
+    -ms-transition: transform var(--transition-speed) ease;
+    -o-transition: transform var(--transition-speed) ease;
+}
+.my-select.active .placeholder-arrow {
+    transform: rotateX(180deg);
+}
+.my-select .option {
+    padding: var(--padding);
+    cursor: pointer;
+    border-top: 0.5px solid var(--white);
+    border-bottom: 0.5px solid var(--white);
+}
+.my-select .option:hover {
+    background: var(--main);
+    color: var(--white);
+}
+.my-select .option.active {
+    background: var(--main);
+    color: var(--white);
+}

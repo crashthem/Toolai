@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toolai</title>
+    <!-- <link rel="stylesheet" href="./tinyslider/tiny-slider.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="body-mask"></div>
+    <div class="modals">
+        <div class="modal auth-modal" data-name="auth">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Authorization</h4>
+                    <button class="modal-close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="auth-form">
+                        <input type="email" placeholder="email" required>
+                        <input type="password" placeholder="password" required>
+                        <button type="submit">Sign in</button>
+                        <button type="button" class="modal-close" data-toggle="modal" data-modal="register">
+                            Don't have an account?
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal auth-modal" data-name="register">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Registration</h4>
+                    <button class="modal-close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="auth-form">
+                        <input type="email" placeholder="email" required>
+                        <input type="password" placeholder="password" required>
+                        <input type="password" placeholder="confirm the password" required>
+                        <button type="submit">Sign in</button>
+                        <button type="button" class="modal-close" data-toggle="modal" data-modal="auth">
+                            Already have an account
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal search-modal" data-name="search">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form class="search-form">
+                        <input type="text" placeholder="search for" required>
+                        <button class="search-button">search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal cart-modal" data-name="cart">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Shopping cart</h4>
+                    <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-list">
+                        <div class="cart__item">
+                            <div class="item__col">
+                                <img src="./images/look/img1.jpg" class="item__thumb" alt="">
+                                <span class="item__name">some item</span>
+                            </div>
+                            <div class="item__col">
+                                <span class="item__color">red</span>
+                                <span class="item__size"> S </span>
+                                <span class="item__price">500$</span>
+                            </div>
+                        </div>
+                        <div class="cart__item">
+                            <div class="item__col">
+                                <img src="./images/look/img1.jpg" class="item__thumb" alt="">
+                                <span class="item__name">some item</span>
+                            </div>
+                            <div class="item__col">
+                                <span class="item__color">red</span>
+                                <span class="item__size"> S </span>
+                                <span class="item__price">500$</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <strong class="cart-total">500$</strong>
+                </div>
+            </div>
+        </div>
+        <div class="modal wishlist-modal" data-name="wishlist">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Wishlist</h4>
+                    <button class="modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-list">
+                        <div class="cart__item">
+                            <div class="item__col">
+                                <img src="./images/look/img1.jpg" class="item__thumb" alt="">
+                                <span class="item__name">some item</span>
+                            </div>
+                            <div class="item__col">
+                                <span class="item__color">red</span>
+                                <span class="item__size"> S </span>
+                                <span class="item__price">500$</span>
+                            </div>
+                        </div>
+                        <div class="cart__item">
+                            <div class="item__col">
+                                <img src="./images/look/img1.jpg" class="item__thumb" alt="">
+                                <span class="item__name">some item</span>
+                            </div>
+                            <div class="item__col">
+                                <span class="item__color">red</span>
+                                <span class="item__size"> S </span>
+                                <span class="item__price">500$</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <strong class="cart-total">2 items in wishlist</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="container">
+            <div class="tools desctop">
+                <div class="loc-lang">
+                    <div class="my-select country-switcher" data-value="null">
+                        <div class="placeholder">
+                            <span class="placeholder-text">
+                                <img src="./icons/flags/eng.png" alt="">
+                            </span>
+                            <span class="placeholder-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="options">
+                            <div class="option" data-value="ru"><img src="./icons/flags/rf.jpg" alt=""></div>
+                            <div class="option" data-value="kg"><img src="./icons/flags/kg.png" alt=""></div>
+                            <div class="option" data-value="en"><img src="./icons/flags/eng.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="my-select lang-switcher" data-value="null">
+                        <div class="placeholder">
+                            <span class="placeholder-text">English</span>
+                            <span class="placeholder-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="options">
+                            <div class="option" data-value="ru">Русский</div>
+                            <div class="option" data-value="kg">Кыргызча</div>
+                            <div class="option" data-value="en">English</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-panel desctop">
+                    <div class="user-panel__item search-button" data-toggle="modal" data-modal="search">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="user-panel__item favorite" data-toggle="modal" data-modal="wishlist">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="user-panel__item bag" data-toggle="modal" data-modal="cart">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <a class="user-panel__item profile" data-toggle="modal" data-modal="auth">
+                        <i class="far fa-user"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="logo desctop">
+                <img src="./icons/logo.png" alt="">
+            </div>
+            <nav class="main-nav desctop">
+                <div class="nav-menu">
+                    <a href="index.html" class="title">
+                        home
+                    </a>
+                </div>
+                <div class="nav-menu" data-toggle="drop-menu">
+                    <a href="./store.html" class="title">
+                        store
+                    </a>
+                    <div class="drop-menu">
+                        <div class="list">
+                            <div class="col">
+                                <a href="#" class="nav-link">All clothing</a>
+                                <a href="#" class="nav-link">Dresses </a>
+                                <a href="#" class="nav-link">Tops</a>
+                                <a href="#" class="nav-link">Jackets</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Knitwear</a>
+                                <a href="#" class="nav-link">Sport</a>
+                                <a href="#" class="nav-link">Jumpsuits</a>
+                                <a href="#" class="nav-link">Skirts</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Jeans</a>
+                                <a href="#" class="nav-link">Trousers</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/nav/img1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-menu" data-toggle="drop-menu">
+                    <a href="#" class="title">
+                        trends
+                    </a>
+                    <div class="drop-menu">
+                        <div class="list">
+                            <div class="col">
+                                <a href="#" class="nav-link">All clothing</a>
+                                <a href="#" class="nav-link">Dresses </a>
+                                <a href="#" class="nav-link">Tops</a>
+                                <a href="#" class="nav-link">Jackets</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Knitwear</a>
+                                <a href="#" class="nav-link">Sport</a>
+                                <a href="#" class="nav-link">Jumpsuits</a>
+                                <a href="#" class="nav-link">Skirts</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Jeans</a>
+                                <a href="#" class="nav-link">Trousers</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/nav/img2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-menu" data-toggle="drop-menu">
+                    <a href="./partners.html" class="title">
+                        partners
+                    </a>
+                    <div class="drop-menu">
+                        <div class="list">
+                            <div class="col">
+                                <a href="#" class="nav-link">All clothing</a>
+                                <a href="#" class="nav-link">Dresses </a>
+                                <a href="#" class="nav-link">Tops</a>
+                                <a href="#" class="nav-link">Jackets</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Knitwear</a>
+                                <a href="#" class="nav-link">Sport</a>
+                                <a href="#" class="nav-link">Jumpsuits</a>
+                                <a href="#" class="nav-link">Skirts</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Jeans</a>
+                                <a href="#" class="nav-link">Trousers</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/nav/img3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-menu" data-toggle="drop-menu">
+                    <a href="./philosophy.html" class="title active">
+                        philosophy
+                    </a>
+                    <div class="drop-menu">
+                        <div class="list">
+                            <div class="col">
+                                <a href="#" class="nav-link">All clothing</a>
+                                <a href="#" class="nav-link">Dresses </a>
+                                <a href="#" class="nav-link">Tops</a>
+                                <a href="#" class="nav-link">Jackets</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Knitwear</a>
+                                <a href="#" class="nav-link">Sport</a>
+                                <a href="#" class="nav-link">Jumpsuits</a>
+                                <a href="#" class="nav-link">Skirts</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Jeans</a>
+                                <a href="#" class="nav-link">Trousers</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/nav/img4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-menu" data-toggle="drop-menu">
+                    <a href="./special-offer.html" class="title">
+                        special offer
+                    </a>
+                    <div class="drop-menu">
+                        <div class="list">
+                            <div class="col">
+                                <a href="#" class="nav-link">All clothing</a>
+                                <a href="#" class="nav-link">Dresses </a>
+                                <a href="#" class="nav-link">Tops</a>
+                                <a href="#" class="nav-link">Jackets</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Knitwear</a>
+                                <a href="#" class="nav-link">Sport</a>
+                                <a href="#" class="nav-link">Jumpsuits</a>
+                                <a href="#" class="nav-link">Skirts</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="nav-link">Jeans</a>
+                                <a href="#" class="nav-link">Trousers</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                                <a href="#" class="nav-link">Blouses</a>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <img src="./images/nav/img5.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <nav class="mobile-nav">
+            <!-- Mobile Nav -->
+            <div class="mobile-nav-header">
+                <button class="mobile-nav-button">
+                    <span class="top"></span>
+                    <span class="mid"></span>
+                    <span class="sub"></span>
+                </button>
+                <div class="logo">
+                    <img src="./icons/logo.png" alt="">
+                </div>
+                <div class="user-panel">
+                    <div class="user-panel__item --white search-button" data-toggle="modal" data-modal="search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </div>
+                    <div class="user-panel__item --white bag" data-toggle="modal" data-modal="cart">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-header">
+                    <div class="loc-lang">
+                        <div class="my-select country-switcher" data-value="null">
+                            <div class="placeholder">
+                                <span class="placeholder-text">
+                                    <img src="./icons/flags/eng.png" alt="">
+                                </span>
+                                <span class="placeholder-arrow">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </div>
+                            <div class="options">
+                                <div class="option" data-value="ru"><img src="./icons/flags/rf.jpg" alt=""></div>
+                                <div class="option" data-value="kg"><img src="./icons/flags/kg.png" alt=""></div>
+                                <div class="option" data-value="en"><img src="./icons/flags/eng.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="my-select lang-switcher" data-value="null">
+                            <div class="placeholder"><span class="placeholder-text">English</span><span
+                                    class="placeholder-arrow"><i class="fas fa-chevron-down"></i></span></div>
+                            <div class="options">
+                                <div class="option" data-value="ru">Русский</div>
+                                <div class="option" data-value="kg">Кыргызча</div>
+                                <div class="option" data-value="en">English</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-panel">
+                        <div class="user-panel__item favorite" data-toggle="modal" data-modal="wishlist">
+                            <i class="far fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <a class="user-panel__item profile" data-toggle="modal" data-modal="auth">
+                            <i class="far fa-user" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="./index.html" class="title"> home </a>
+                </div>
+                <div class="nav-item" data-toggle="sub-menu">
+                    <a href="./store.html" class="title"> store </a>
+                    <div class="sub-menu">
+                        <div class="sub-menu-header">
+                            <div class="sub-menu-close">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <a href="./store.html" class="nav-link">All clothing</a>
+                            <a href="./store.html" class="nav-link">Dresses </a>
+                            <a href="./store.html" class="nav-link">Tops</a>
+                            <a href="./store.html" class="nav-link">Jackets</a>
+                            <a href="./store.html" class="nav-link">Knitwear</a>
+                            <a href="./store.html" class="nav-link">Sport</a>
+                            <a href="./store.html" class="nav-link">Jumpsuits</a>
+                            <a href="./store.html" class="nav-link">Skirts</a>
+                            <a href="./store.html" class="nav-link">Jeans</a>
+                            <a href="./store.html" class="nav-link">Trousers</a>
+                            <a href="./store.html" class="nav-link">Blouses</a>
+                            <a href="./store.html" class="nav-link">Blouses</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item" data-toggle="sub-menu">
+                    <a href="#" class="title"> trends </a>
+                    <div class="sub-menu">
+                        <div class="sub-menu-header">
+                            <div class="sub-menu-close">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends </a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                            <a href="#" class="nav-link">trends</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item" data-toggle="sub-menu">
+                    <a href="#" class="title"> partners </a>
+                    <div class="sub-menu">
+                        <div class="sub-menu-header">
+                            <div class="sub-menu-close">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <a href="#" class="nav-link">partners</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                            <a href="#" class="nav-link">partner</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item" data-toggle="sub-menu">
+                    <a href="#" class="title"> philosophy </a>
+                    <div class="sub-menu">
+                        <div class="sub-menu-header">
+                            <div class="sub-menu-close">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy </a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                            <a href="#" class="nav-link">philosophy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item" data-toggle="sub-menu">
+                    <a href="#" class="title"> special offer </a>
+                    <div class="sub-menu">
+                        <div class="sub-menu-header">
+                            <div class="sub-menu-close">
+                                <i class="fas fa-long-arrow-alt-right"></i>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <a href="#" class="nav-link">All offers</a>
+                            <a href="#" class="nav-link">offer </a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                            <a href="#" class="nav-link">offer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav> <!-- Mobile Nav End -->
+    </header>
+    <main>
+        <section class="philosophy">
+            <div class="container">
+                <h2 class="section-title">Our philosophy</h2>
+                <div class="philosophy_tabs tab">
+                    <div class="tab-panel">
+                        <h5 class="tab-title active" data-toggle="tab" data-target="nomad">We are nomad</h5>
+                        <h5 class="tab-title" data-toggle="tab" data-target="movements">Motionless movements</h5>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-item active" data-name="nomad">
+                            <div class="philosophy-card card">
+                                <div class="card-image">
+                                    <img src="./images/philosophy/img1.jpg" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        NOMAD AS BRAND PHILOSOPHY
+                                    </h4>
+                                    <a href="#" class="card-link">
+                                        MORE
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="philosophy-card card">
+                                <div class="card-image">
+                                    <img src="./images/philosophy/img2.jpg" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <p class="card-description">
+                                        WE MOVE, WE RELOCATE FROM ONE PLACE TO ANOTHER, WE GET NEW INFORMATION, WE MEET
+                                        NEW PEOPLE, FELLOW TRAVELERS WITH STORIES
+                                    </p>
+                                    <a href="#" class="card-link">
+                                        MORE
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="philosophy-card card">
+                                <div class="card-image">
+                                    <img src="./images/philosophy/img3.jpg" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <p class="card-description">
+                                        IN THE CONTEXT OF WORLD GLOBALIZATION, NOMADICITY IS THE CORE OF THE INTEGRATION
+                                        OF DEVELOPMENT, EXCHANGE OF EXPERIENCE.
+                                    </p>
+                                    <a href="#" class="card-link">
+                                        MORE
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-item" data-name="movements">
+                            <div class="philosophy-card card">
+                                <div class="card-image">
+                                    <img src="./images/philosophy/img2.jpg" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        Nomad as brand philosophy
+                                    </h4>
+                                    <a href="#" class="card-link">
+                                        MORE
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="philosophy-card card">
+                                <div class="card-image">
+                                    <img src="./images/philosophy/img3.jpg" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <p class="card-description">
+                                        We move, we relocate from one place to another, we get new information, we meet
+                                        new people, fellow travelers with stories
+                                    </p>
+                                    <a href="#" class="card-link">
+                                        MORE
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="philosophy-card card">
+                                <div class="card-image">
+                                    <img src="./images/philosophy/img2.jpg" alt="">
+                                </div>
+                                <div class="card-content">
+                                    <p class="card-description">
+                                        In the context of world globalization, nomadicity is the core of the integration
+                                        of development, exchange of experience.
+                                    </p>
+                                    <a href="#" class="card-link">
+                                        MORE
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="explore">
+            <div class="container">
+                <h2 class="section-title">Explore editorial</h2>
+                <div class="expore-slider cards-slider-4">
+                    <div class="slide">
+                        <img src="./images/philosophy/exprore/img1.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/philosophy/exprore/img2.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/philosophy/exprore/img3.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/philosophy/exprore/img4.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/philosophy/exprore/img5.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/philosophy/exprore/img6.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/philosophy/exprore/img7.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/philosophy/exprore/img8.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/philosophy/exprore/img9.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/philosophy/exprore/img10.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="nomad">
+            <div class="container">
+                <h2 class="section-title">Shop nomad compilation</h2>
+                <div class="nomad-slider cards-slider-4">
+                    <div class="slide">
+                        <img src="./images/philosophy/nomad-compilation/img1.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/philosophy/nomad-compilation/img2.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/philosophy/nomad-compilation/img3.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./images/philosophy/nomad-compilation/img4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="container links">
+            <nav class="footer-nav desctop">
+                <div class="col">
+                    <div class="title">TOOLAI</div>
+                    <a href="#">About us</a>
+                    <a href="#">Partnership</a>
+                    <a href="#">Affiliates</a>
+                    <a href="#">Size guide</a>
+                    <a href="#">Stories</a>
+                </div>
+                <div class="col">
+                    <div class="title">Services</div>
+                    <a href="./delivery.html">Delivery</a>
+                    <a href="./advertising.html">Advertising</a>
+                    <a href="./returns.html">Exchange, Return <br> & Refund</a>
+                    <a href="./payment.html">Payment</a>
+                </div>
+                <div class="col">
+                    <div class="title">Legal</div>
+                    <a href="./terms-and-conditions.html">Terms & Conditions</a>
+                    <a href="./privacy.html">Privacy policy</a>
+                    <a href="./cookie.html">Cookie policy</a>
+                    <a href="./contact.html">Contuct us</a>
+                    <a href="./faq.html">FAQ</a>
+                </div>
+            </nav>
+            <nav class="footer-nav mobile">
+                <div class="loc-lang">
+                    <div class="my-select country-switcher" data-value="null">
+                        <div class="placeholder">
+                            <span class="placeholder-text">
+                                <img src="./icons/flags/eng.png" alt="">
+                            </span>
+                            <span class="placeholder-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="options">
+                            <div class="option" data-value="ru"><img src="./icons/flags/rf.jpg" alt=""></div>
+                            <div class="option" data-value="kg"><img src="./icons/flags/kg.png" alt=""></div>
+                            <div class="option" data-value="en"><img src="./icons/flags/eng.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="my-select lang-switcher" data-value="null">
+                        <div class="placeholder">
+                            <span class="placeholder-text">English</span>
+                            <span class="placeholder-arrow">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </div>
+                        <div class="options">
+                            <div class="option" data-value="ru">Русский</div>
+                            <div class="option" data-value="kg">Кыргызча</div>
+                            <div class="option" data-value="en">English</div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="s-accordion">
+                    <h5 class="accordion-title">
+                        <span>TOOLAI</span>
+                        <i class="fas fa-chevron-down accordion-arrow" aria-hidden="true"></i>
+                    </h5>
+                    <div class="accordion-body">
+                        <a href="#">About us</a>
+                        <a href="#">Partnership</a>
+                        <a href="#">Affiliates</a>
+                        <a href="#">Size guide</a>
+                        <a href="#">Stories</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="s-accordion">
+                    <h5 class="accordion-title">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down accordion-arrow" aria-hidden="true"></i>
+                    </h5>
+                    <div class="accordion-body">
+                        <a href="./delivery.html">Delivery</a>
+                        <a href="./advertising.html">Advertising</a>
+                        <a href="./returns.html">Exchange, Return & Refund</a>
+                        <a href="./payment.html">Payment</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="s-accordion">
+                    <h5 class="accordion-title">
+                        <span>Legal</span>
+                        <i class="fas fa-chevron-down accordion-arrow" aria-hidden="true"></i>
+                    </h5>
+                    <div class="accordion-body">
+                        <a href="./terms-and-conditions.html">Terms & Conditions</a>
+                        <a href="./privacy.html">Privacy policy</a>
+                        <a href="./cookie.html">Cookie policy</a>
+                        <a href="./contact.html">Contuct us</a>
+                        <a href="./faq.html">FAQ</a>
+                    </div>
+                </div>
+                <hr>
+            </nav>
+            <div class="col footer-tools">
+                <div class="socials">
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-pinterest"></i></a>
+                    <a href=""><i class="fab fa-tiktok"></i></a>
+                    <a href=""><i class="fab fa-youtube-square"></i></a>
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram-square"></i></a>
+                </div>
+                <form action="" class="contact-form">
+                    <label for="message">Email us</label>
+                    <div class="row">
+                        <input type="text" id="message">
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container"><span>© Copyright 2022 TOOLAI </span></div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/fe05d3666d.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
